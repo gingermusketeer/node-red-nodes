@@ -49,7 +49,7 @@ module.exports = function(RED) {
                 previousPayload = msg.payload;
                 node.send([msg, msg]);
             } else {
-                node.send(msg)
+                node.send([msg, null])
             }
         }, 60000);
 
